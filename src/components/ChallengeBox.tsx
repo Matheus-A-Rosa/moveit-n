@@ -9,7 +9,7 @@ const {activeChallenge, resetChallenge, compleChallenge} = useContext(Challenges
 const { resetCountdown } = useContext(CountdownContext);
 
     function handChallengeSucceeded(){
-        CompletedChallenges();
+        compleChallenge();
         resetCountdown();
     }
 
@@ -41,7 +41,7 @@ const { resetCountdown } = useContext(CountdownContext);
                         <button 
                         type="button"
                         className={styles.challengeSucceededButton}
-                        onClick={handleChallengeFailed}
+                        onClick={handChallengeSucceeded}
                         >
                             Completei</button>
                     </footer>
